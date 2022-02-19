@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class BinarySearchRunner
 {
   public static void main(String[] args)
@@ -39,12 +41,21 @@ public class BinarySearchRunner
     // test when the target is NOT in the array
     idx = BinarySearch.binarySearch(arr, 13);
     System.out.println("the number 13 was NOT found! " + idx);
+
+    // binarySearch method in the Arrays class
+    int[] arr1 = {-92, -72, -7, 0, 1, 2, 6, 8, 12, 34, 54, 65};
+    idx = Arrays.binarySearch(arr1, -72);
+    System.out.println("the number -72 was found! it is located at index: " + idx);
+
+    double[] arr2 = {-10.1, -8.8, -5.6, 3.2, 4.3, 7, 7.2, 9.1};
+    idx = Arrays.binarySearch(arr2, 3.2);
+    System.out.println("the number 3.2 was found! it is located at index: " + idx);
        
     // --- PART B: DETAILS! ---
     // When you are ready, uncomment each of these tests and run to see printed commentary
     // alongside every search; this prints out what is being checked and what is happening
     
-    int[] arr1 = {-10, -6, 0, 2, 12, 14, 17, 23, 35, 45, 49, 55, 81, 100, 108};
+    //int[] arr1 = {-10, -6, 0, 2, 12, 14, 17, 23, 35, 45, 49, 55, 81, 100, 108};
 /*
     // test when the target is in the middle (found on the first try!)
     int index = BinarySearch.binarySearchPrintedCommentary(arr1, 23);
